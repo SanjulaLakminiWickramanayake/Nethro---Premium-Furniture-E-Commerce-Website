@@ -1,0 +1,68 @@
+:root {
+    --navy: #1E293B;
+    --navy-soft: #334155;
+    --blue: #3B82F6;
+    --blue-soft: #eff6ff;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --card: #ffffff;
+    --bg: #f8fafc;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.card-surface {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.table-shell {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.status-pill.success {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.status-pill.warning {
+    background: rgba(245, 158, 11, 0.12);
+    color: #b45309;
+}
+
+.status-pill.danger {
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c;
+}
+
+@media (max-width: 1023px) {
+    .sidebar-hidden-mobile {
+        display: none;
+    }
+}

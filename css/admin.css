@@ -1,0 +1,53 @@
+/* Admin-specific overrides and helpers */
+
+/* Keep the dashboard shell from shrinking when wide tables are present. */
+.admin-layout {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.admin-sidebar {
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.admin-main {
+    background: #f7f7f9; /* subtle light background for admin */
+    grid-column: 1;
+    margin-left: 280px;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.admin-main .data-table {
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.admin-main .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.admin-main .form-group { margin-bottom: 18px; }
+
+/* Make file inputs consistent */
+.admin-main input[type="file"].form-control {
+    padding: 8px 12px;
+    background: white;
+}
+
+/* Buttons in admin area */
+.admin-main .btn { min-width: 120px; }
+
+/* Mobile: stack admin columns */
+@media (max-width: 900px) {
+    .admin-layout { grid-template-columns: 1fr; }
+    .admin-sidebar { display: none; }
+    .admin-main {
+        grid-column: 1;
+        margin-left: 0;
+    }
+    .admin-main .form-row { grid-template-columns: 1fr; }
+}
